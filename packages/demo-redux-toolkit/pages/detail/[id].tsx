@@ -14,6 +14,7 @@ import {
 const Page: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = ({serverTimestamp}) => {
     console.log('State on render', useStore().getState());
     console.log('Timestamp on server: ', serverTimestamp);
+
     const dispatch = useDispatch();
     const pageId = useSelector(selectDetailPageId);
     const pageSummary = useSelector(selectDetailPageSummary);
